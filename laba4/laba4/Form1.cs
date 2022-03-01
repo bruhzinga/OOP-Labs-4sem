@@ -1,4 +1,5 @@
 using LABA3;
+using laba4;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
@@ -22,11 +23,20 @@ namespace LABA2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            var single = Singleton.GetInstance();
+            this.Font = single.font;
+            this.BackColor = single.col;
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            try
+            var direct = new Director();
+            var builder = new RandomAccountBuilder();
+            direct.Construct(builder, builder);
+            listBox1.Items.Add(builder.GetResult());
+            accounts.Add(builder.GetResult());
+
+            /*try
             {
                 if (balance.Value == 0 || num.Text == "" || type.Text == "" || name.Text == "")
                 { MessageBox.Show("¬веди все ƒанные"); return; }
@@ -63,7 +73,7 @@ namespace LABA2
             catch
             {
                 MessageBox.Show("Ќ≈«я");
-            }
+            }*/
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
