@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using LABA3;
+using laba4;
 
 namespace LABA2
 {
-    public class Account
+    public class Account : Ishow
     {
         public Account()
         {
@@ -65,6 +66,11 @@ namespace LABA2
         }
 
         public override string ToString()
+        {
+            return Show();
+        }
+
+        public virtual string Show()
         {
             return $"Number: {num} Type:{Type} SMS: {Sms} \n Name:{owner.Name} Birtdate:{owner.Birtdate} ";
         }

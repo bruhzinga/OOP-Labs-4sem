@@ -57,6 +57,7 @@
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label8 = new System.Windows.Forms.Label();
             this.passport = new System.Windows.Forms.TextBox();
+            this.отменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.balance)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -240,7 +241,8 @@
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.поискToolStripMenuItem2,
             this.сортировкаToolStripMenuItem,
-            this.выходToolStripMenuItem});
+            this.выходToolStripMenuItem,
+            this.отменитьToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.файлToolStripMenuItem.Text = "&Файл";
@@ -248,7 +250,7 @@
             // поискToolStripMenuItem2
             // 
             this.поискToolStripMenuItem2.Name = "поискToolStripMenuItem2";
-            this.поискToolStripMenuItem2.Size = new System.Drawing.Size(175, 26);
+            this.поискToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
             this.поискToolStripMenuItem2.Text = "Поиск";
             this.поискToolStripMenuItem2.Click += new System.EventHandler(this.поискToolStripMenuItem2_Click);
             // 
@@ -259,7 +261,7 @@
             this.поГодуОткрытияToolStripMenuItem,
             this.типВкладаToolStripMenuItem});
             this.сортировкаToolStripMenuItem.Name = "сортировкаToolStripMenuItem";
-            this.сортировкаToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.сортировкаToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.сортировкаToolStripMenuItem.Text = "Сортировка";
             // 
             // поНомеруToolStripMenuItem
@@ -286,7 +288,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.выходToolStripMenuItem.Text = "Вы&ход";
             // 
             // оПрограммеToolStripMenuItem
@@ -310,6 +312,13 @@
             this.passport.Name = "passport";
             this.passport.Size = new System.Drawing.Size(162, 27);
             this.passport.TabIndex = 27;
+            // 
+            // отменитьToolStripMenuItem
+            // 
+            this.отменитьToolStripMenuItem.Name = "отменитьToolStripMenuItem";
+            this.отменитьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.отменитьToolStripMenuItem.Text = "Отменить";
+            this.отменитьToolStripMenuItem.Click += new System.EventHandler(this.отменитьToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -382,5 +391,6 @@
         private ToolStripMenuItem поГодуОткрытияToolStripMenuItem;
         private ToolStripMenuItem типВкладаToolStripMenuItem;
         private ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private ToolStripMenuItem отменитьToolStripMenuItem;
     }
 }

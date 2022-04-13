@@ -8,12 +8,14 @@ namespace LABA2
     public partial class Form1 : Form
     {
         public List<Account> accounts;
+        public Caretaker caretaker;
         private IOrderedEnumerable<Account> account;
 
         public Form1()
         {
             InitializeComponent();
             accounts = new List<Account>();
+            caretaker = new Caretaker(accounts);
         }
 
         private void balance_Scroll(object sender, EventArgs e)
@@ -30,10 +32,11 @@ namespace LABA2
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            caretaker.Backup();
             var direct = new Director();
             var builder = new RandomAccountBuilder();
             direct.Construct(builder, builder);
-            listBox1.Items.Add(builder.GetResult());
+            listBox1.Items.Add(new Adapter1(builder.GetResult()));
             accounts.Add(builder.GetResult());
 
             /*try
@@ -130,6 +133,16 @@ namespace LABA2
             foreach (var ac in accounts)
             {
                 listBox1.Items.Add(ac);
+            }
+        }
+
+        private void îòìåíèòüToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            caretaker.Undo();
+            listBox1.Items.Clear();
+            foreach (var ac in accounts)
+            {
+                listBox1.Items.Add(new Adapter2(ac));
             }
         }
     }

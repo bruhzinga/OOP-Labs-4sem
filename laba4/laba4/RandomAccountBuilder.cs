@@ -9,7 +9,7 @@ namespace laba4
 {
     internal class RandomAccountBuilder : IAccoutBuilder, IOwnerBuilder
     {
-        private Account _product = new Account();
+        private Account _product;
 
         public RandomAccountBuilder()
         {
